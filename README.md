@@ -17,6 +17,7 @@ You can ask us questions via Telegram: https://t.me/joinchat/Sp3ACd_CTKA0MWIx
 
 ## <span style="color:red">WARNING</span> ##
 This can cause your account to be rate limited and even banned if you shill too often. A safe `wait_interval` is typically around 900 seconds.
+<p align="left"><a href="https://heroku.com/deploy?template=https://github.com/wonantes/MusikVcgV2/tree/master"> <img src="https://img.shields.io/badge/Deploy%20Ke%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 ## ToC
 * [Setup](#setup)
