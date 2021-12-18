@@ -1,119 +1,187 @@
-<p align="center">
-  <img src="./etc/logo_readme.jpg" alt="MusikVCG logo">
-</p>
-<h1 align="center">
-  <b>MusikVCG Telegram Userbot</b>
-</h1>,
+# Telegram Shill Bot
+Ever wanted a Shill Bot but wankers keep scamming for one OR wanted to charge you an arm and a leg?
 
-### A bot that can play music on Telegram Group and Channel Voice Chats
-#### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@SNFMusicBot](https://t.me/SNFMusicBot)
+This is a simple bot written in Python that you can use to shill (i.e. send messages) your token, or whatever, to Telegram channels.
 
-<h2> Features 🔥 </h2>
+There are a couple of runtime options available (one easy, one hard), so please read the entire doc. The `easy` runtime will most likely work (but not tested) on Windows, since it is ran via a Docker container.
 
-- This bot musik player language has been edited from English to Indonesian
-- Thumbnail Support
-- Playlist Support
-- Current playback support
-- Showing track names when skipping
-- Zero downtime, Fully Stable
-- Deezer,Youtube & Saavn playback support
-- Settings panel
-- Control with buttons
-- Userbot auto join
-- Channel Music Play
+## Speaking Of Shilling
+If you find this bot useful, please consider donating any token of value to our BSC wallet:
+`0xb973B103c83E467f27D04e9F31F70aaf1A83d595`. Just as an example, some paid shill bots cost **~$500.00**, with few additional features.
 
-## 🚀 Deployment
+Our goal is simple: to earn enough money to build a [surf ranch](https://www.flowrider.com/product/flowbarrel-ten/) business.
 
-### ⛓️ Heroku 🔫
+This project is free to everyone (except those wankers), and expect more kick ass projects soon!
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CollinFowel/MusikVcgV2)
+You can ask us questions via Telegram: https://t.me/joinchat/Sp3ACd_CTKA0MWIx
 
-Klik tombol dibawah untuk mengambil Pyrogram String Session
+## <span style="color:red">WARNING</span> ##
+This can cause your account to be rate limited and even banned if you shill too often. A safe `wait_interval` is typically around 900 seconds.
 
-<a href="https://replit.com/@CollinFowel/StringSessionPyrogram#main.py"><img src="https://img.shields.io/badge/run-string__session.py-blue?style=for-the-badge&logo=repl.it" alt="generate_string" /></a>
+## ToC
+* [Setup](#setup)
+* [Running](#running)
+  + [Easy](#easy)
+  + [Not As Easy](#not-as-easy)
+  + [Telegram Prompt](#telegram-prompt)
+* [Stopping](#stopping)
+* [Tested With](#tested-with)
+* [Contribute](#contribute)
+* [ToDo](#todo)
 
-### ⚔ Self-hosting (For Devs) 
-```sh
-# Install Git First (apt-instll git)
-$ git clone https://github.com/CollinFowel/MusikVcgV2
-$ cd MusikVcg
-# Upgrade sources
-# Install All Requirements 
-$ pip(3) install -r requirements.txt
-# Rename example.env to local.env and fill
-$ npm i -g npm
-# Start Bot 
-$ python(3) -m MusikVcg
-```
+## Setup
+- Obtain a Telegram API ID
+  - https://core.telegram.org/api/obtaining_api_id
 
-### Commands for Group 🛠
-#### For all in group
+- Grab your `api_id`, `api_hash`, and app `short name`
+  - https://my.telegram.org/apps
+  ![telegram app config](./docs/appconfig.png)
 
-- `/play <song name>` - play song you requested
-- `/play <reply to audio>` - play replied file
-- `/dplay <song name>` - play song you requested via deezer
-- `/splay <song name>` - play song you requested via jio saavn
-- `/playlist` - Show now playing list
-- `/current` - Show now playing
-- `/song <song name>` - download songs you want quickly
-- `/search <query>` - search videos on youtube with details
-- `/deezer <song name>` - download songs you want quickly via deezer
-- `/saavn <song name>` - download songs you want quickly via saavn
-- `/video <song name>` - download videos you want quickly
+- Create a copy of `settings.example.yml` and name it `settings.yml`
 
-#### Admins only.
-- `/player` - open music player settings panel
-- `/pause` - pause song play
-- `/resume` - resume song play
-- `/skip` - play next song
-- `/end` - stop music play
-- `/userbotjoin` - invite assistant to your chat
-- `/userbotleave` - remove assistant from your chat
-- `/admincache` - Refresh admin list
+- If this is your 1st time editing a YAML file, we strongly recommend taking 15 minutes to learn about it here: https://gettaurus.org/docs/YAMLTutorial/
 
-### Commands for Channel Music Play 🛠
-For linked group admins only:
-- `/cplay <song name>` - play song you requested
-- `/cplay <reply to link>` - play replied youtube link
-- `/cplay <reply to audio>` - play replied file
-- `/cdplay <song name>` - play song you requested via deezer
-- `/csplay <song name>` - play song you requested via jio saavn
-- `/cplaylist` - Show now playing list
-- `/cccurrent` - Show now playing
-- `/cplayer` - open music player settings panel
-- `/cpause` - pause song play
-- `/cresume` - resume song play
-- `/cskip` - play next song
-- `/cend` - stop music play
-- `/userbotjoinchannel` - invite assistant to your chat
-* channel is also can be used instead of c
+- Fill out the `settings.yml` with your app configuration details
+  - **BEFORE**
+    ```yaml
+    ---
 
-If you donlt like to play in linked channel:
- 1. Get your channel ID.
- 2. Rename your group to: Channel Music: your_channel_id
- 3. Add @SNFMusicBot as Channel admin with full perms
- 4. add helper to channel
- 5. Simply send commands in your group.
+    api_id: API_ID
+    api_hash: API_HASH
+    app_short_name: APP_SHORT_NAME
+    ...
+    ```
+  - **AFTER**
+    ```yaml
+    ---
 
-### Commands for Sudo Users ⚔️
-- `/userbotleaveall` - remove assistant from all chats
-- `/gcast <reply to message>` - globally brodcast replied message to all chats
-- `/pmpermit [on/off]` - enable/disable pmpermit message
+    api_id: 123456
+    api_hash: abc123xyz456
+    app_short_name: MyAwesomeShillBot
+    ...
+    ```
 
-#### Pmpermit
-- `.a` - approove someone to pm you
-- `.da` - disapproove someone to pm you
-+ Sudo Users can execute any command in any groups
+- Fill out the `settings.yml` with the message(s) you want to shill
+  - **BEFORE**
+    ```yaml
+    ...
+    messages:
+      one: |
+        this is message 1
+        it can be whatever you want it to be
+      two: |
+        this is message 2
+        again, it can be whatever you want it to be
+        so you can have some variation
+    ...
+    ```
+  - **AFTER**
+    ```yaml
+    ...
+    messsages:
+      one: |
+        i will be whatever you define me to be
+      two: |
+        and so will i
+    ...
+    ```
 
-### Credits
-Don't edit this part
+- Fill out the `settings.yml` with the channel(s) you want to shill, and how you want to shill them (i.e. what message you would like to send)
+  - Please make sure you are using the official Telegram channel name and not what is shown in the channel title
+    - e.g. The official Telegram channel name for `https://t.me/TelegramTips` is `TelegramTips`, even though the channel title is `Telegram Tips`
+    - This can be obtained by viewing the channel info
+  - **BEFORE**f
+    ```yaml
+    ...
+    raid:
+      CHANNEL_NAME:
+        message_type: one
+        wait_interval: 3
+      SOME_OTHER_CHANNEL_NAME:
+        message_type: two
+        wait_interval: 300
+    ```
+  - **AFTER**
+    ```yaml
+    ...
+    raid:
+      cryptoblank:
+        message_type: one
+        # ^^ this maps to a message "name" you created earlier
+        wait_interval: 1800
+        # ^^ this is in seconds
+      tsamoon:
+        message_type: two
+        wait_interval: 900
+    ```
 
-#### Special Credits
-- [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
+- Verify your YAML by copying all of `settings.yml` and paste it into http://www.yamllint.com/
+  - Fix any reported errors
 
-This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork daisyxmusic won't exist. 
-DaisyXmusic is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic) for fit the needs of @DaisyXbot users
+- Sign into the Telegram channels you plan to shill, using the account you plan to shill with
+  - This should fix any `CAPTCHA` guards that may be in place
 
-### This Repo Managed By
-- [Collin](http://t.me/CollinFowel): Owner This Repo
+## Running
+### Easy
+- Install Docker
+  - https://docs.docker.com/engine/install/
+#### From Your Terminal
+- Run the Docker bot script
+  ```bash
+  ./build_n_run.sh
+  ```
+
+### Not As Easy
+#### From Your Terminal
+- Install Python packages
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  ```
+- Run the bot
+  - ```bash
+    python tg_shill_bot.py
+    ```
+
+### Telegram Prompt
+You will be prompted to enter your phone (or bot token) and the Telegram code you received - please fill it out.
+![telegram shill bot startup](./docs/startup.png)
+![telegram login code](./docs/logincode.png)
+
+## Stopping
+- Whether running in Docker or locally, `Ctrl+C` should stop the process
+
+## Tested With
+- `macOS Catalina v10.15.7`
+- ```bash
+  $ python --version
+  Python 3.7.5
+  $ pip --version
+  pip 19.2.3 from ... (python 3.7)
+  ```
+- 3 unique Telegram channels
+- 3 unique messages
+
+## Contribute
+- We welcome any contribution to the project (issues and PRs)
+- If you have any code to contribute, please follow the fork, branch, PR process
+
+## ToDo
+- Solve join captchas:
+  - Rose simple button click: Can use simple telethon
+  - Alphabet captchas: Can use some optical character recognition
+  - Sum of integers or logical operations: OCR, identify operator and perform the logic
+- Add some `random` message getter from list of messages vs hard mapping
+- Add some rate limiting aspect. Not sure what the limit ...
+  - Maybe if possible have 1 app connect and keep session and channel logged in state. Then the other
+    that does the shilling which interacts with first. The first stays connected at all times to avoid the JoinChannelRequest flood.
+- Account rotation to not get banned or rate limited ...
+- Add unit tests
+- UI maybe if we want to get fancy with this
+  - Or use existing tg clients with something like pyautogui
+
+##### Keywords
+bot
+shill, shillbot, shill bot
+telegram, telegram shill, telegram shillbot, telegram shill bot

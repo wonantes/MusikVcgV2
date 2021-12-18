@@ -1,13 +1,12 @@
-FROM debian:latest
+FROM python:3.9-alpine
 
-RUN apt update && apt upgrade -y
-RUN apt install git curl python3-pip ffmpeg -y
-RUN pip3 install -U pip
-RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
-RUN apt-get install -y nodejs
-RUN npm i -g npm
-RUN mkdir /app/
-WORKDIR /app/
-COPY . /app/
-RUN pip3 install -U -r requirements.txt
-CMD python3 -m MusikVcg
+RUN apk --no-cache add build-base
+
+WORKDIR /app
+
+COPY requirements.txt /app/
+RUN pip install -r requirements.txt
+
+COPY tg_shill_bot.py settings.yml /app/
+
+CMD ["python", "-u", "tg_shill_bot.py"]

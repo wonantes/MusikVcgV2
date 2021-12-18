@@ -1,0 +1,121 @@
+---
+
+api_id: 8857087
+api_hash: 55f503a96cfdbac2d30d752d47d5a049
+app_short_name: emmmm
+
+messages:
+  one: |
+     💠 IDM TOKEN NEWS 💠
+
+     "Sebelum tgl 20 Desember 2021 semoga jadi ya AMA ( Ask Me Anything ) dengan pak Wakil Mentri Perdagangan Indonesia, Bapak Jerry Sambuaga dan saya juga di podcast Artis besar"
+
+     Siapa artis Besar yg di maksud M.C Basyar (CEO&DEV IDM TOKEN)
+
+     JOIN WITH US 
+     TGRAM : @ IDMToken
+  two: |
+    this is message 2
+    again, it can be whatever you want it to be
+    so you can have some variation
+
+raid:
+  luckycatchinese:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  arzanocrypto:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  POKERTOKENBSCchineseC:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  bakerdao_cn:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  PloyMoneyDoge:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  kim99075:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  CoinGuardianOfficialchina1:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  ChinaPumpNow:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  ChinaRoyal:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  NIFTIESSS:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
+  luckycatchinese:
+    message_type: one
+    # this is in seconds, so the below example is equal to 5 minutes
+    # we recommend at least 900 seconds, which is equal to 15 minutes
+    wait_interval: 10
+    # this is in seconds, so the below example is equal to 1 minute
+    increase_wait_interval: 60
+    # this assumes the image's path is relative to the script `tg_shill_bot.py`
+    image: 
