@@ -1,1 +1,1 @@
-worker: python3 tg_shill_bot.py
+worker: python tg_shill_bot.py
